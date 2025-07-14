@@ -9,6 +9,7 @@ A dynamic, interactive To-Do List application built with vanilla JavaScript, HTM
 - ⌨️ Add tasks using Enter key
 - 🎨 Modern, responsive UI design
 - 🔄 Real-time DOM updates
+- 💾 **Local Storage persistence** - Tasks save automatically and persist across browser sessions
 
 ## Learning Objectives
 
@@ -16,6 +17,7 @@ This project helps you master:
 
 - **Advanced DOM Manipulation**: Dynamic element creation and manipulation
 - **Event Handling**: Click events, keyboard events, and user interactions
+- **Local Storage**: Data persistence across browser sessions
 - **JavaScript Best Practices**: Clean code structure and error handling
 - **Responsive Design**: Mobile-friendly CSS layouts
 
@@ -89,6 +91,10 @@ Then open `http://localhost:8000` in your browser.
 
 3. **Input Validation**: The app will alert you if you try to add an empty task
 
+4. **Automatic Saving**: Tasks are automatically saved to your browser's Local Storage
+
+5. **Persistence**: Your tasks will remain even after closing the browser or refreshing the page
+
 ## Technical Implementation
 
 ### DOM Manipulation Techniques Used
@@ -98,6 +104,14 @@ Then open `http://localhost:8000` in your browser.
 - `appendChild()` - Adding elements to the DOM
 - `removeChild()` - Removing elements from the DOM
 - `addEventListener()` - Event handling
+
+### Local Storage Implementation
+
+- `localStorage.setItem()` - Save tasks to browser storage
+- `localStorage.getItem()` - Retrieve saved tasks
+- `JSON.stringify()` - Convert arrays to JSON for storage
+- `JSON.parse()` - Convert JSON back to arrays
+- **Automatic persistence** - Tasks automatically save and load
 
 ### Event Handling
 
@@ -111,8 +125,10 @@ The JavaScript follows a clean, organized structure:
 
 1. **Setup**: DOMContentLoaded event listener
 2. **Element Selection**: Getting references to DOM elements
-3. **Core Function**: `addTask()` function with validation
-4. **Event Binding**: Attaching event listeners
+3. **Load Function**: `loadTasks()` retrieves saved tasks from Local Storage
+4. **Core Function**: `addTask()` function with validation and Local Storage support
+5. **Event Binding**: Attaching event listeners
+6. **Persistence**: Automatic saving/loading of tasks
 
 ## Browser Compatibility
 
@@ -126,7 +142,7 @@ This application works in all modern browsers:
 
 Potential improvements you could add:
 
-- [ ] Local Storage persistence
+- [x] **Local Storage persistence** ✅ (Already implemented!)
 - [ ] Task editing functionality
 - [ ] Task completion status (checkboxes)
 - [ ] Task categories or tags
