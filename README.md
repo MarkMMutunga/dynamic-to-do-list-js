@@ -19,6 +19,24 @@ This project helps you master:
 - **JavaScript Best Practices**: Clean code structure and error handling
 - **Responsive Design**: Mobile-friendly CSS layouts
 
+## What is DOM?
+
+**DOM** stands for **Document Object Model**:
+
+- **D** - **Document** = Your HTML webpage
+- **O** - **Object** = Each HTML element becomes a JavaScript object
+- **M** - **Model** = The structured representation/framework that organizes everything
+
+The DOM is a programming interface that represents your HTML document as a collection of objects that JavaScript can manipulate. It's like a live bridge between your HTML and JavaScript, allowing you to:
+
+- Find elements: `document.getElementById('task-input')`
+- Create elements: `document.createElement('li')`
+- Modify content: `element.textContent = 'Hello'`
+- Add/remove elements: `parent.appendChild(child)`
+- Handle events: `element.addEventListener('click', function)`
+
+In this To-Do List app, DOM manipulation makes it "dynamic" - you can add and remove tasks without refreshing the page!
+
 ## Project Structure
 
 ```
