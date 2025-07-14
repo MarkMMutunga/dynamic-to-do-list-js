@@ -149,7 +149,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-Created as part of a JavaScript DOM manipulation learning exercise.
+Created by Mark Mikile Mutunga.
 
 ---
 
